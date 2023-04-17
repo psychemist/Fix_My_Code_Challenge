@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""square module contains a class that 
+"""square module contains a class that
 creates a square and calculates its properties
 """
 
@@ -11,7 +11,7 @@ class Square():
     """
     width = 0
     height = 0
-    
+
     def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
@@ -27,6 +27,7 @@ class Square():
     def __str__(self):
         """ Returns a string representation of square instance """
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
     s = Square(width=12, height=9)
