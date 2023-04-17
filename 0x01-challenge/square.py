@@ -4,9 +4,8 @@ creates a square and calculates its properties
 """
 
 
-class Square():
-    """
-    Creates a Square class object with two public class attributes,
+class square():
+    """Creates a Square class object with two public class attributes,
     two public class methods and two private class methods
     """
     width = 0
@@ -17,11 +16,11 @@ class Square():
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    def area(self):
+    def area_of_my_square(self):
         """ Returns area of the square """
         return self.width * self.height
 
-    def perimeter_of_my_square(self):
+    def PermiterOfMySquare(self):
         """ Returns perimeter of the square """
         return (self.width * 2) + (self.height * 2)
 
@@ -32,7 +31,7 @@ class Square():
 
 if __name__ == "__main__":
 
-    s = Square(width=12, height=9)
+    s = square(width=12, height=9)
     print(s)
-    print(s.area())
-    print(s.perimeter_of_my_square())
+    print(s.area_of_my_square())
+    print(s.PermiterOfMySquare())
