@@ -4,7 +4,7 @@ creates a square and calculates its properties
 """
 
 
-class square():
+class Square():
     """Creates a Square class object with two public class attributes,
     two public class methods and two private class methods
     """
@@ -13,6 +13,7 @@ class square():
 
     def __init__(self, *args, **kwargs):
         """ Initializes square class instance and populates its dictionary """
+        super().__init__()
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -20,7 +21,7 @@ class square():
         """ Returns area of the square """
         return self.width * self.height
 
-    def PermiterOfMySquare(self):
+    def perimeter_of_my_square(self):
         """ Returns perimeter of the square """
         return (self.width * 2) + (self.height * 2)
 
@@ -31,7 +32,7 @@ class square():
 
 if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.perimeter_of_my_square())
